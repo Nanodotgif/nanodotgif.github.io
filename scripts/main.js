@@ -15,7 +15,7 @@ let myHeading = document.querySelector("h1");
 
 function setUserName() {
     const myName = prompt("What should I call you?");
-    if (myName === "") {
+    if (myName === "" || myName === null) {
         setUserName();
         return;
     }
