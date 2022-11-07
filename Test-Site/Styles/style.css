@@ -1,0 +1,50 @@
+html {
+    background-color: white;
+    font-size: 14px;
+    font-family: 'Source Code Pro', monospace;
+    color:  whitesmoke;
+}
+
+h1 {
+    font-size: 35px;
+    transition: font-size 0.3s;
+}
+
+#tester {
+    color: #37db06;
+    font-size: 14px;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+#tester:hover {
+    color:brown;
+    font-size: 20px;
+}
+
+a:hover {
+    font-size: 20px;
+}
+
+h1:hover {
+    font-size: 40px;
+    /* width: 155%; */
+}
+body {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: black;
+    padding: 0 20px 20px 20px;
+    border: 5px solid #383838;
+  }
+
+img {
+    display: block;
+    margin: 0 auto;
+    box-shadow: 10px 10px #383838;
+    width: 50%;
+    transition: width 0.5s;
+}
+
+ img:hover {
+    width: 55% ;
+ } 
