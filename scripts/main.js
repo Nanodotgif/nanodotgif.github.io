@@ -15,12 +15,12 @@ let myHeading = document.querySelector("h1");
 
 function setUserName() {
     const myName = prompt("What should I call you?");
-    if (myName === "" || myName === null) {
-        setUserName();
-        return;
+    if (!myName) {
+      setUserName();
+    } else {
+      localStorage.setItem("name", myName);
+      myHeading.textContent = `> hi, youre ${myName}`;
     }
-    localStorage.setItem("name", myName);
-    myHeading.textContent = `> hi, youre ${myName}`;
   }
 
 if (!localStorage.getItem("name")) {
