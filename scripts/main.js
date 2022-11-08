@@ -1,10 +1,10 @@
-let myButton = document.querySelector("button");
+import { Slideshow } from "./slideshow.js";
 let myHeading = document.querySelector("h1");
 
 function setUserName() {
     const myName = prompt("What should I call you?");
     if (!myName) {
-      setUserName();
+        myHeading.textContent = `> hi,  ${localStorage.getItem("name")}`;
     } else {
       localStorage.setItem("name", myName);
       myHeading.textContent = `> hi,  ${myName}`;
@@ -23,7 +23,7 @@ if (!localStorage.getItem("name")) {
     myHeading.textContent = `> welcome back, ${storedName}`;
 }
 
-myButton.onclick = ()=> {
+document.getElementById("userButton").onclick = ()=> {
     setUserName();
 }
 
@@ -31,26 +31,19 @@ myButton.onclick = ()=> {
 const image = document.querySelector("img");
 
 image.onclick = ()=> {
-    changeImage();
+    slides.pauseSlideshow();
+    slides.changeImage();
+    slides.startSlidehshow();
 }
 
-setInterval(changeImage, 4000);
-function changeImage() {
-    const currentSrc = image.getAttribute("src");
-    if (currentSrc === "images/Cyber-Corn-Woman.jpg") {
-        image.style.opacity = 0;
-        setTimeout(()=> {
-            image.setAttribute("src", "images/Caught-In-4K.jpg");
-            image.style.opacity = 1;
-        }, 500);
-    } 
-    else {
-        image.style.opacity = 0;
-        setTimeout(()=> {
-            image.setAttribute("src", "images/Cyber-Corn-Woman.jpg");
-            image.style.opacity = 1;
-        }, 500);
-            
-    }
-}
+const imageList = [
+    "images/slides/slide-1.jpg",
+    "images/slides/slide-2.jpg",
+    "images/slides/slide-3.jpg",
+    "images/slides/slide-4.jpg",
+    "images/slides/slide-5.jpg"
+];
+
+var slides = new Slideshow(imageList, 4000, image);
+slides.startSlidehshow();
 

@@ -9,7 +9,8 @@ h1, .title {
     font-size: 35px;
     transition: font-size 0.3s cubic-bezier(0.22, 1, 0.36, 1);
     display: inline;
-    position: relative;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
 }
 .title {
     cursor: pointer;
@@ -44,10 +45,10 @@ img {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 5vh;
-    margin-top: 5vh;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
     box-shadow: 10px 10px #383838;
-    width: 30vw;
+    width: 60vmin;
 }
 
 .showcaseImage {
