@@ -21,6 +21,11 @@ function setUserName() {
       localStorage.setItem("name", myName);
       myHeading.textContent = `> hi,  ${myName}`;
     }
+    if (localStorage.getItem("name") === "dagen" || localStorage.getItem("name") === "Dagen")
+    {
+        alert("I love you, Dagen!!")
+        myHeading.textContent = `> hi,  ${myName}!!!♥`;
+    }
   }
 
 if (!localStorage.getItem("name")) {

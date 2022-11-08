@@ -8,12 +8,14 @@ html {
 h1 {
     font-size: 35px;
     transition: font-size 0.3s;
+    display: inline;
 }
 
 #tester {
     color: #37db06;
     font-size: 14px;
     transition: color 0.3s, font-size 0.3s;
+    display: inline;
 }
 
 #tester:hover {
@@ -21,9 +23,6 @@ h1 {
     font-size: 20px;
 }
 
-a:hover {
-    font-size: 20px;
-}
 
 h1:hover {
     font-size: 40px;
@@ -48,3 +47,21 @@ img {
  img:hover {
     width: 55% ;
  } 
+
+button, #pageNav {
+    background-color: #636363; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: background-color 0.2s;
+    font-family: 'Source Code Pro';
+    cursor: pointer;
+}
+
+button:hover, #pageNav:hover {
+    background-color:rgb(119, 119, 119);
+}
