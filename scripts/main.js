@@ -1,15 +1,3 @@
-
-const image = document.querySelector("img");
-
-image.onclick = ()=> {
-    const currentSrc = image.getAttribute("src");
-    if (currentSrc === "images/Cyber-Corn-Woman.jpg") {
-        image.setAttribute("src", "images/Caught-In-4K.jpg");
-    } else {
-        image.setAttribute("src", "images/Cyber-Corn-Woman.jpg");
-    }
-}
-
 let myButton = document.querySelector("button");
 let myHeading = document.querySelector("h1");
 
@@ -37,5 +25,32 @@ if (!localStorage.getItem("name")) {
 
 myButton.onclick = ()=> {
     setUserName();
+}
+
+// Changes the showcase image every 4000 ms
+const image = document.querySelector("img");
+
+image.onclick = ()=> {
+    changeImage();
+}
+
+setInterval(changeImage, 4000);
+function changeImage() {
+    const currentSrc = image.getAttribute("src");
+    if (currentSrc === "images/Cyber-Corn-Woman.jpg") {
+        image.style.opacity = 0;
+        setTimeout(()=> {
+            image.setAttribute("src", "images/Caught-In-4K.jpg");
+            image.style.opacity = 1;
+        }, 500);
+    } 
+    else {
+        image.style.opacity = 0;
+        setTimeout(()=> {
+            image.setAttribute("src", "images/Cyber-Corn-Woman.jpg");
+            image.style.opacity = 1;
+        }, 500);
+            
+    }
 }
 

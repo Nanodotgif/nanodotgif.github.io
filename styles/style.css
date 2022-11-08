@@ -5,10 +5,14 @@ html {
     color:  whitesmoke;
 }
 
-h1 {
+h1, .title {
     font-size: 35px;
-    transition: font-size 0.3s;
+    transition: font-size 0.3s cubic-bezier(0.22, 1, 0.36, 1);
     display: inline;
+    position: relative;
+}
+.title {
+    cursor: pointer;
 }
 
 #tester {
@@ -24,12 +28,12 @@ h1 {
 }
 
 
-h1:hover {
+.title:hover {
     font-size: 40px;
     /* width: 155%; */
 }
 body {
-    width: 1000px;
+    width: 50vw;
     margin: 0 auto;
     background-color: black;
     padding: 0 20px 20px 20px;
@@ -38,17 +42,24 @@ body {
 
 img {
     display: block;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
     box-shadow: 10px 10px #383838;
-    width: 50%;
-    transition: width 0.5s;
+    width: 30vw;
+}
+
+.showcaseImage {
+    transition: opacity .5s, transform 0.3s cubic-bezier(0.45, 0, 0.55, 1) ;
 }
 
  img:hover {
-    width: 55% ;
+    /* width: 32vw ; */
+    transform: scale(1.09);
  } 
 
-button, #pageNav {
+button, .pageNav {
     background-color: #636363; /* Green */
     border: none;
     color: white;
@@ -57,11 +68,11 @@ button, #pageNav {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s cubic-bezier(0.45, 0, 0.55, 1);
     font-family: 'Source Code Pro';
     cursor: pointer;
 }
 
-button:hover, #pageNav:hover {
+button:hover, .pageNav:hover {
     background-color:rgb(119, 119, 119);
 }
