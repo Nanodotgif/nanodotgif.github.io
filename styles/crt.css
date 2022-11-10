@@ -11,6 +11,9 @@ html::-webkit-scrollbar {
 body {
   margin: 0px;
 }
+p {
+  font-size: 20px;
+}
 .crt {
   pointer-events: none
 }
@@ -224,8 +227,9 @@ button:hover {
   color: black;
 }
 
-.c::before {
+.c::before, #userInput::before {
   content: '> ';
+  /* margin-right: 2px; */
 }
 
 #cursor::after {
@@ -238,4 +242,32 @@ button:hover {
   0% { content: '|'; }
   50% { content: ''; }
 }
+
+#userInput {
+  width: 100%;
+  background-color: transparent;
+  color: darkgreen;
+  border: 0px;
+  outline: none;
+  font-size: 20px;
+  font-family: 'Source Code Pro', monospace;
+  animation: inherit;
+  padding: 0px;
+  height: 25.3px; /*Idk why this needs to be so specific*/
+}
+
+.not-selectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#commandFeed {
+  margin: 0px;
+}
+
+
 

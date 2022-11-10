@@ -37,3 +37,75 @@ toggleFilter.onclick = ()=> {
         filterEnabled = true;
     }
 }
+
+// Command Line
+var inputRequested = false;
+var currentCallback;
+var userName = "";
+const inputField = document.getElementById("userInput");
+inputField.addEventListener("keydown", (key)=> {
+    if (key.key === "Enter" && !inputRequested) {
+        addToFeed(inputField.value, 'c');
+        parseCommand(inputField.value);
+        inputField.value = "";
+    } else if (key.key === "Enter" && inputRequested) {
+        addToFeed(inputField.value, 'c');
+        currentCallback(inputField.value);
+        inputField.value = "";
+        inputRequested = false;
+    }
+});
+
+
+const commandFeed = document.getElementById("commandFeed");
+function addToFeed(command, type) {
+    // commandFeed.innerText += "\r\n" + command;
+    var b = "";
+    if (type === 'c') {b = ">"};
+    commandFeed.innerText += "\r\n" + b + command;
+}
+
+async function requestInput(callback) {
+    inputRequested = true;
+    currentCallback = callback;
+}
+
+function parseCommand(command) {
+    if(inputRequested) {return};
+    switch (command.toLowerCase()) {
+        case "test":
+            addToFeed("Test!!!");
+            break;
+
+        case "cls":
+            commandFeed.innerText = "";
+            break;
+
+        case "help":
+            addToFeed("Have some help!\r\nCOMMANDS:\r\ncls: clear screen\r\nsetname: set your name\r\nsignout: sign out.");
+            break;
+
+        case "setname":
+            addToFeed("What would you like your name to be?");
+            requestInput((name) => {
+                userName = name;
+                addToFeed(`Your name is ${name}!`);
+            });
+            break;
+        
+        case "signout":
+            addToFeed("Are you sure you want to sign out? (Y/N)");
+            requestInput((answer) => {
+                if (answer.toLowerCase() === "y") {addToFeed("Signed out.")} else {addToFeed("Action cancelled.")}
+            });
+            break;
+        
+        case "whoami":
+            if (userName != "") {addToFeed(userName)} else {addToFeed("No user logged in.")};
+            break;
+    
+        default:
+            addToFeed(`Command '${command}' not recognized.`);
+            break;
+    }
+}
