@@ -4,8 +4,8 @@ const winText = document.getElementById('winText');
 const title = document.getElementById('title');
 const screenHeight = getComputedStyle(playWrapper).height;
 const screenWidth = getComputedStyle(playWrapper).width;
-const numberOfPlayers = 15;
-const movementSpeed = .5;
+const numberOfPlayers = 200;
+const movementSpeed = .9;
 const playerSize = 50;
 var players = [];
 var rocks = [];
@@ -62,13 +62,16 @@ const Player = {
 
         let movementVector = getMovementVector(this, this.target);
         if (this.fleeing === true) { movementVector.x *= -1; movementVector.y *= -1; };
-        let deltaX = this.x + movementVector.x / this.target.distance * movementSpeed;
-        let deltaY = this.y + movementVector.y / this.target.distance * movementSpeed;
+        let newX = this.x + movementVector.x / this.target.distance * movementSpeed;
+        let newY = this.y + movementVector.y / this.target.distance * movementSpeed;
 
-        if (deltaX < 0 || deltaX > parseInt(screenWidth) - playerSize) { deltaX = this.x };
-        if (deltaY < playerSize || deltaY > parseInt(screenHeight)) { deltaY = this.y };
+        if (newX < 0 && movementVector.x < 0) { newX = this.x } else 
+        if (newX > parseInt(screenWidth) - playerSize && movementVector.x > 0) { newX = this.x }
 
-        placeElement(this, deltaX, deltaY)
+        if (newY < playerSize && movementVector.y < 0) { newY = this.y } else
+        if (newY > parseInt(screenHeight) && movementVector.y > 0) { newY = this.y }
+
+        placeElement(this, newX, newY)
     },
 
     slowUpdate() {
@@ -126,7 +129,7 @@ function Start() {
     updatePositions();
     updateInterval = setInterval(Update, 30/1000);
     // setInterval(Update, 2000);
-    slowUpdateInterval = setInterval(SlowUpdate, 500);
+    slowUpdateInterval = setInterval(SlowUpdate, 5/1000);
     // Update();
 }
 
