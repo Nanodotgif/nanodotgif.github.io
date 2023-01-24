@@ -1,3 +1,9 @@
+window.addEventListener("load", (event) => {
+    commandFeed.innerText = feedHeader;
+  });
+
+
+
 function typeWriter(el, text) {
     document.getElementById("cursor").removeAttribute("id");
     el.setAttribute("id", "cursor");
@@ -12,10 +18,13 @@ function typeWriter(el, text) {
 }
 let typewriterTargets = document.querySelectorAll(".typewriter");
 typewriterTargets[0].setAttribute("id","cursor");
-window.onload = ()=> {typeWriter(typewriterTargets[0], "Hello, I'm Josh.");}
+window.onload = ()=> {typeWriter(typewriterTargets[0], "Hello, welcome to my website.");}
 setTimeout(() => {
-    typeWriter(typewriterTargets[1], "What's your name?");
-}, 2000);
+    typeWriter(typewriterTargets[1], "Enter 'help' to begin.");
+}, 3000);
+setTimeout(() => {
+    document.getElementById("cursor").removeAttribute("id");
+}, 6000);
  
  
  
@@ -70,6 +79,8 @@ async function requestInput(callback) {
     currentCallback = callback;
 }
  
+const feedHeader = "v0.0.1";
+
 function parseCommand(input) {
     if(inputRequested) {return};
     let args = input.split(" ");
@@ -83,11 +94,11 @@ function parseCommand(input) {
             break;
  
         case "cls":
-            commandFeed.innerText = "";
+            commandFeed.innerText = feedHeader;
             break;
  
         case "help":
-            addToFeed("Have some help!\r\nCOMMANDS:\r\ncls: clear screen\r\nsetname: set your name\r\nsignout: sign out.");
+            addToFeed("Have some help!\r\nCOMMANDS:\r\ncls: clear screen\r\nsetname: set your name\r\nwhoami: who are you?\r\nsignout: sign out.\r\nnav: navigate to other pages");
             break;
  
         case "setname":
