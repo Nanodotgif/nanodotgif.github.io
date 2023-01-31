@@ -1,0 +1,103 @@
+html {
+    background-color: #556270;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#listWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.listItem {
+    padding: .2em;
+    margin: 10px auto;
+    display: flex;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: rgb(153, 153, 153);
+    border-style: solid;
+    background-color: #eee;
+    width: auto;
+    height: 50px;
+    text-align: center;
+    overflow-wrap: normal;
+    align-items: center;
+}
+.listItem:hover {
+    background-color: rgb(153, 153, 153);
+}
+
+
+#addTask {
+    padding: 0;
+    text-align: center;
+    border-radius: 7px;
+    border-width: 0;
+    width: 50px;
+    height: 50pxpx;
+    font-size: 50px;
+    border: none;
+    color: #556270;
+    background-color: #4ecdc4;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.1s cubic-bezier(0.45, 0, 0.55, 1);
+    /* font-family: 'Source Code Pro'; */
+    cursor: pointer;
+}
+
+#addTask:hover {
+    background-color: #c7f464;
+}
+
+#taskBarWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 100px;
+    width: auto;
+    bottom: 10px;
+    margin: 10px auto;
+    /* background-color: red; */
+}
+
+#inputWrapper {
+    width: 100%;
+    margin: 10px;
+    flex-basis: right;
+    display: flex;
+    flex-grow: 1;
+}
+
+#taskInputText {
+    padding: .5em .2em;
+    margin: auto;
+    height: 50px;
+    border-width: 0;
+    border-radius: 10px;
+    flex-grow: 1;
+    width: 100%;
+    border-color: rgb(153, 153, 153);
+    background-color: #eee;
+    border-style: solid;
+    outline: none;
+    transition: border-width 0.1s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+#taskInputText:focus {
+    border-width: 4px;
+}
+
+input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    outline: none;
+    /* transition: width 0.1s cubic-bezier(0.45, 0, 0.55, 1), height 0.1s cubic-bezier(0.45, 0, 0.55, 1); */
+}
+
+input[type="checkbox"]:hover {
+    height: 35px;
+    width: 35px;
+}
