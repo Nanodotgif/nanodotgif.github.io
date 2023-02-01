@@ -121,6 +121,7 @@ function parseCommand(input) {
                 addToFeed("Which page would you like to navigate to?");
                 requestInput((page) => {
                     document.location.href = page+".html";
+                    addToFeed("Redirecting...");
                 })
             }
             break;
