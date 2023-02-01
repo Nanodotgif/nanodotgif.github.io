@@ -19,9 +19,10 @@ html {
     border-style: solid;
     background-color: #eee;
     width: auto;
-    height: 50px;
+    height: fit-content;
     text-align: center;
-    overflow-wrap: normal;
+    overflow: auto;
+    word-break: break-all;
     align-items: center;
 }
 .listItem:hover {
@@ -96,6 +97,8 @@ input[type="checkbox"] {
     height: 30px;
     width: 30px;
     outline: none;
+    min-width: 30px;
+    min-height: 30px;
     /* transition: width 0.1s cubic-bezier(0.45, 0, 0.55, 1), height 0.1s cubic-bezier(0.45, 0, 0.55, 1); */
 }
 
