@@ -53,14 +53,16 @@ html {
 }
 
 #taskBarWrapper {
+    position: sticky;
     display: flex;
     align-items: center;
     flex-direction: row;
     height: 100px;
     width: auto;
-    bottom: 10px;
+    bottom: 0px;
     margin: 10px auto;
-    /* background-color: red; */
+    background-color: #556270;
+    border-top: 6px;
 }
 
 #inputWrapper {
@@ -91,13 +93,15 @@ html {
 }
 
 input[type="checkbox"] {
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     outline: none;
     /* transition: width 0.1s cubic-bezier(0.45, 0, 0.55, 1), height 0.1s cubic-bezier(0.45, 0, 0.55, 1); */
 }
 
-input[type="checkbox"]:hover {
-    height: 35px;
-    width: 35px;
+.not-selectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
