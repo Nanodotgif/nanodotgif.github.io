@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/gotcha.css">
+    <title>Gotcha</title>
+</head>
+<body>
+    <div id="gotcha-wrapper">
+        <input type="button" id="gotcha-button">
+        <p id="gotcha-text">I'm not a robot</p>
+        <img src="/images/gotcha-logo.png" style="width: 300px; height: auto;">
+    </div>
+    <div id="popup">
+        <div id="popup-banner">
+            <p id="question" style="margin-bottom: 10px;">Select the image with a</p>
+            <span id="object" style="font-weight: bold;"><br>Bus</span>
+        </div>
+        <div id="image-matrix">
+            <table style="width: 100%; text-align: center;">
+                <tr>
+                    <td><img src="images/1.png" class="image-choice not-selectable"></td>
+                    <td><img src="images/2.png" class="image-choice not-selectable"></td>
+                    <td><img src="images/3.png" class="image-choice not-selectable"></td>
+                </tr>
+                <tr>
+                    <td><img src="images/4.png" class="image-choice not-selectable"></td>
+                    <td><img src="images/5.png" class="image-choice not-selectable"></td>
+                    <td><img src="images/6.png" class="image-choice not-selectable"></td>
+                </tr>
+                <tr>
+                    <td><img src="images/7.png" class="image-choice not-selectable"></td>
+                    <td><img src="images/8.png" class="image-choice not-selectable"></td>
+                    <td><img src="images/9.png" class="image-choice not-selectable"></td>
+                </tr>
+            </table>
+        </div>
+        <p id="wrong-text">Sorry, please try again.</p>
+        <button id="next-button">Next</button>
+    </div>
+    <script src="scripts/gotcha.js"></script>
+</body>
+</html>
