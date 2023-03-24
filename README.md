@@ -1,4 +1,4 @@
-# nanodotgif.github.io
+# nano.github.io
 I apologize for your being here!!!
 
 This is just a random collection of HTML/JS/CSS projects that I make when I'm bored! Most of them are useless, but I hope they can be a little fun to mess around with :)
