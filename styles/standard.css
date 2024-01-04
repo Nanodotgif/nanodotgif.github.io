@@ -68,6 +68,7 @@ body {
     background: none;
     filter: none;
     text-decoration: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 #link-container > a:hover {
@@ -103,7 +104,7 @@ hr {
     border-color: var(--accent-color);
 }
 
-button, a {
+button, .box-link {
     font-family: 'Poppins', sans-serif;
     background-color: var(--accent-color);
     color: var(--background-color);
@@ -175,4 +176,12 @@ img {
     color: var(--background-color);
     margin: 0;
     padding: 5px;
+}
+
+a {
+    text-decoration-thickness: 2px;
+    color: var(--accent-color);
+}
+a:visited {
+    color: var(--accent-color);
 }
