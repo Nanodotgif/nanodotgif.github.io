@@ -5,9 +5,9 @@
 /* font-family: 'Poppins', sans-serif; */
 
 :root {
-    --background-color: #fcf5c7;
-    --accent-color: #383838;
-    --shadow-color: #3838383D
+    --background-color: #0f0f0f;
+    --accent-color: #e0e0e0;
+    --shadow-color: #a0a0a03d
 }
 
 html {
