@@ -6,3 +6,19 @@
     width: 100%;
     background-color: var(--background-color);
 }
+
+img {
+    display: block;
+    margin: auto;
+    height: auto;
+    max-width: 99%;
+    filter: drop-shadow(3px 3px 0px var(--shadow-color));
+}
+
+.img-caption {
+    margin: auto;
+    max-width: 99%;
+    background-color: var(--accent-color);
+    filter: drop-shadow(3px 3px 0px var(--shadow-color));
+    
+}
