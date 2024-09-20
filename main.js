@@ -2,7 +2,7 @@ const menuButton = document.getElementById("menu");
 const menuBar = document.getElementById("menu-bar");
 const menuContainer = document.getElementById("menu-container");
 const topBar = document.getElementById("top-bar");
-const hamburgerIcon = document.getElementById("menu").childNodes[0];
+const hamburgerIcon = document.getElementById("menu").childNodes[1];
 const themeSwitcher = document.getElementById("theme-switcher");
 
 menuOpened = false;
