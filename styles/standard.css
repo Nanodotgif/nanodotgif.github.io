@@ -1,18 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
-/* font-family: 'Inconsolata', monospace; */
-/* font-family: 'Poppins', sans-serif; */
 
 :root {
     --background-color: #242333;
     --text-color: #FFFFFF;
     --accent-color: #01B0D3;
     --shadow-color: #01B0D33D;
-    /* --background-color: #f7f7f7;
-    --text-color: #242333;
-    --accent-color: #389db1;
-    --shadow-color: #00667a3d; */
     transition: background-color 0.5s linear, color 0.5s linear
 }
 
