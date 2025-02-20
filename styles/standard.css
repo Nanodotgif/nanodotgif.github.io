@@ -159,13 +159,13 @@ img {
     display: block;
     margin: auto;
     height: auto;
-    max-width: 70%;
+    max-width: 95%;
     filter: drop-shadow(3px 3px 0px var(--shadow-color));
 }
 
 .img-caption {
     margin: auto;
-    max-width: 70%;
+    max-width: 95%;
     background-color: var(--accent-color);
     filter: drop-shadow(3px 3px 0px var(--shadow-color));
     
