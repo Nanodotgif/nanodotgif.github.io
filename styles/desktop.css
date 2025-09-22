@@ -1,3 +1,21 @@
 #menu-bar {
     width: 22em;
 }
+
+#top-bar {
+    width: 100%;
+    background-color: var(--background-color);
+}
+
+.title {
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    transition: font-size 0.6s, padding 0.6s;
+}
+
+.title.shrink {
+    font-size: 24pt;
+    padding-top: 0;
+    margin: 0;
+}

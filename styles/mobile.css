@@ -22,3 +22,9 @@ img {
     filter: drop-shadow(3px 3px 0px var(--shadow-color));
     
 }
+
+.title {
+    padding-top: 20%;
+    padding-bottom: 10%;
+    font-size: 35pt;
+}

@@ -56,3 +56,14 @@ function toggleTheme() {
     }
     isLightMode = !isLightMode;
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const title = document.querySelector('.title');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            title.classList.add('shrink');
+        } else {
+            title.classList.remove('shrink');
+        }
+    });
+});

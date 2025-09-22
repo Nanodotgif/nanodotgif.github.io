@@ -31,7 +31,7 @@ body {
 #menu {
     font-weight: bold;
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 10pxpx;
 }
 
 #theme-switcher {
@@ -56,7 +56,6 @@ body {
     z-index: 1;
     left: 0;
     height: 100%;
-    /* width: 20em; */
     align-items: center;
     transform: translate(-100%);
     transition: transform 0.3s ease-in-out;
@@ -99,7 +98,6 @@ footer > p {
     padding-bottom: 100px;
     margin: auto;
     background: none;
-    filter: none;
     color: var(--accent-color);
     filter: drop-shadow(3px 3px 0px var(--shadow-color));
 }
@@ -159,13 +157,13 @@ img {
     display: block;
     margin: auto;
     height: auto;
-    max-width: 95%;
+    max-width: 80%;
     filter: drop-shadow(3px 3px 0px var(--shadow-color));
 }
 
 .img-caption {
     margin: auto;
-    max-width: 95%;
+    max-width: 80%;
     background-color: var(--accent-color);
     filter: drop-shadow(3px 3px 0px var(--shadow-color));
     
@@ -180,7 +178,10 @@ img {
 }
 .img-caption > p {
     color: var(--background-color);
-    margin: 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
     padding: 5px;
 }
 .img-caption > p > a {
@@ -194,7 +195,3 @@ a {
     text-decoration-thickness: 2px;
     color: var(--accent-color);
 }
-a:visited {
-    color: var(--accent-color);
-}
-
