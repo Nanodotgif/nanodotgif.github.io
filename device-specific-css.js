@@ -5,7 +5,7 @@ if (visualViewport.width < 1000) {
 } else {
     cssPath = "styles/desktop.css";
 }
-window.onload = ()=>{}
+window.onload = ()=>{
 
     var fileref = document.createElement("link");
 
@@ -14,4 +14,4 @@ window.onload = ()=>{}
 
     document.getElementsByTagName("head")[0].appendChild(fileref);
 
-// }
+}
